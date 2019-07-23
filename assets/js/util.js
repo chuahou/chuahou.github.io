@@ -6,7 +6,7 @@
 	 */
 	$.fn.navList = function() {
 
-		var	$this = $(this);
+		var	$this = $(this),
 			$a = $this.find('a'),
 			b = [];
 
@@ -41,6 +41,13 @@
 	 */
 	$.fn.panel = function(userConfig) {
 
+		// Vars.
+			var	$this = $(this),
+				$body = $('body'),
+				$window = $(window),
+				id = $this.attr('id'),
+				config;
+
 		// No elements?
 			if (this.length == 0)
 				return $this;
@@ -54,13 +61,6 @@
 				return $this;
 
 			}
-
-		// Vars.
-			var	$this = $(this),
-				$body = $('body'),
-				$window = $(window),
-				id = $this.attr('id'),
-				config;
 
 		// Config.
 			config = $.extend({
@@ -93,10 +93,6 @@
 					visibleClass: 'visible'
 
 			}, userConfig);
-
-			// Expand "target" if it's not a jQuery object already.
-				if (typeof config.target != 'jQuery')
-					config.target = $(config.target);
 
 		// Panel.
 
@@ -156,22 +152,22 @@
 							if (!href || href == '#' || href == '' || href == '#' + id)
 								return;
 
-							// Cancel original event.
-								event.preventDefault();
-								event.stopPropagation();
+						// Cancel original event.
+							event.preventDefault();
+							event.stopPropagation();
 
-							// Hide panel.
-								$this._hide();
+						// Hide panel.
+							$this._hide();
 
-							// Redirect to href.
-								window.setTimeout(function() {
+						// Redirect to href.
+							window.setTimeout(function() {
 
-									if (target == '_blank')
-										window.open(href);
-									else
-										window.location.href = href;
+								if (target == '_blank')
+									window.open(href);
+								else
+									window.location.href = href;
 
-								}, config.delay + 10);
+							}, config.delay + 10);
 
 						});
 
@@ -183,7 +179,7 @@
 					$this.touchPosX = event.originalEvent.touches[0].pageX;
 					$this.touchPosY = event.originalEvent.touches[0].pageY;
 
-				})
+				});
 
 				$this.on('touchmove', function(event) {
 
@@ -302,6 +298,9 @@
 	 */
 	$.fn.placeholder = function() {
 
+		// Vars.
+			var $this = $(this);
+
 		// Browser natively supports placeholders? Bail.
 			if (typeof (document.createElement('input')).placeholder != 'undefined')
 				return $(this);
@@ -319,9 +318,6 @@
 				return $this;
 
 			}
-
-		// Vars.
-			var $this = $(this);
 
 		// Text, TextArea.
 			$this.find('input[type=text],textarea')
@@ -526,10 +522,6 @@
 	$.prioritize = function($elements, condition) {
 
 		var key = '__prioritize';
-
-		// Expand $elements if it's not already a jQuery object.
-			if (typeof $elements != 'jQuery')
-				$elements = $($elements);
 
 		// Step through elements.
 			$elements.each(function() {
