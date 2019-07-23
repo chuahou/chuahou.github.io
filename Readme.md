@@ -6,3 +6,7 @@
 A [website](https://chuahou.dev) with very questionable LGTM code quality (at the time of writing).
 
 [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com)
+
+## Theme used
+
+The theme used is [Spectral](https://html5up.net/spectral) by [HTML5 UP](https://html5up.net/).
