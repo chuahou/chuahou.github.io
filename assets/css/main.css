@@ -2045,6 +2045,10 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon.noborder {
+			font-size:3em;
+		}
+
 		.icon.major {
 			-moz-transform: rotate(-45deg);
 			-webkit-transform: rotate(-45deg);
