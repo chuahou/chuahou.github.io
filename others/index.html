@@ -33,6 +33,24 @@
         <meta property="og:url" content="https://chuahou.dev"/>
         <meta property="og:type" content="website"/>
 
+        <!-- Responsive embed style -->
+        <style>
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 30px; height: 0; overflow: hidden;
+            }
+
+            .video-container iframe,
+            .video-container object,
+            .video-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
     </head>
 
     <body class="is-preload">
@@ -64,21 +82,74 @@
             <article id="main">
                 <header>
                     <h2>Others</h2>
-                    <p>a collection of other things, coming soon&trade;</p>
+                    <p>a collection of other things I do</p>
                 </header>
                 <section id="contents" class="wrapper style5">
                     <div class="inner">
 
-                        <h3>Coming soon, I said</h3>
+                        <h3>Contents</h3>
 
                         <ul class="alt">
                             <li>
-                                Nothing yet
+                                <a href="#guitar">Electric Guitar</a>
                             </li>
                             <li>
-                                Yep, still nothing
+                                <a href="#gym">Gym (5/3/1)</a>
                             </li>
                         </ul>
+
+                    </div>
+                </section>
+
+                <section id="guitar" class="wrapper style4">
+                    <div class="inner">
+
+                        <h3>Guitar</h3>
+
+                        <p>
+                            I've been playing guitar since December 2014, or so I say, but in reality I don't play that much.
+                            As of 2019, I should have nearly 5 years of experience but in reality it's more like 1 year.
+                        </p>
+
+                        <p>
+                            All I have to show for it now are these videos:
+                        </p>
+
+                        <h5>Koisuru Universe / SCANDAL</h5>
+                        <p>Chorus only demonstration. I swear I can play the whole thing, but things never go well when recording...</p>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fOTGXE1jlEI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <hr/>
+
+                        <h5>Don't say "lazy" / SHSLMC</h5>
+                        <p>Guitar and (synth) drums only recording made to try out the Zoom R8 recorder.</p>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/UV93sihOUuo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="gym" class="wrapper style5">
+                    <div class="inner">
+
+                        <h3>Gym (5/3/1)</h3>
+
+                        <p>
+                            I'm not a very fit person, but what I have confidence in is automating calculation I am lazy or
+                            lack the arithmetic capability to perform. <a href="https://xkcd.com/1205/">Relevant xkcd</a>
+                        </p>
+
+                        <p>
+                            You know what they say; Google Sheets is the best workout app. My spreadsheet for automatic
+                            calculation and recording can be found here:
+                        </p>
+
+                        <a class="button primary" href="https://docs.google.com/spreadsheets/d/11a8ao1dDkFIvk7JSvXXTqiSVSI8fb1hlkOWC6gtQubk/edit?usp=sharing">
+                            5/3/1 Template
+                        </a>
 
                     </div>
                 </section>
