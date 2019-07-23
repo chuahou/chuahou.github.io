@@ -41,6 +41,13 @@
 	 */
 	$.fn.panel = function(userConfig) {
 
+		// Vars.
+			var	$this = $(this),
+				$body = $('body'),
+				$window = $(window),
+				id = $this.attr('id'),
+				config;
+
 		// No elements?
 			if (this.length == 0)
 				return $this;
@@ -54,13 +61,6 @@
 				return $this;
 
 			}
-
-		// Vars.
-			var	$this = $(this),
-				$body = $('body'),
-				$window = $(window),
-				id = $this.attr('id'),
-				config;
 
 		// Config.
 			config = $.extend({
@@ -298,6 +298,9 @@
 	 */
 	$.fn.placeholder = function() {
 
+		// Vars.
+			var $this = $(this);
+
 		// Browser natively supports placeholders? Bail.
 			if (typeof (document.createElement('input')).placeholder != 'undefined')
 				return $(this);
@@ -315,9 +318,6 @@
 				return $this;
 
 			}
-
-		// Vars.
-			var $this = $(this);
 
 		// Text, TextArea.
 			$this.find('input[type=text],textarea')
