@@ -8,7 +8,6 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$wrapper = $('#page-wrapper'),
 		$banner = $('#banner'),
 		$header = $('#header');
 
