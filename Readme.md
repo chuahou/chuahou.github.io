@@ -1,7 +1,7 @@
 # chuahou.github.io
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/chuahou/chuahou.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/chuahou/chuahou.github.io/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/chuahou/chuahou.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/chuahou/chuahou.github.io/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/chuahou/chuahou.github.io.svg?logo=lgtm&logoWidth=18&style=for-the-badge)](https://lgtm.com/projects/g/chuahou/chuahou.github.io/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/chuahou/chuahou.github.io.svg?logo=lgtm&logoWidth=18&style=for-the-badge)](https://lgtm.com/projects/g/chuahou/chuahou.github.io/context:javascript)
 
 A [website](https://chuahou.dev) with no content.
 
