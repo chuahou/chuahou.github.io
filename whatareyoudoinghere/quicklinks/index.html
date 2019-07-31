@@ -37,6 +37,37 @@
             }
         </style>
 
+        <!-- symbol copying script -->
+        <script>
+            function copyelement(element)
+            {
+                // create new temporary textarea
+                var textArea = document.createElement("textarea");
+                textArea.style.position = 'fixed';
+                textArea.style.top = 0;
+                textArea.style.left = 0;
+                textArea.style.width = '2em';
+                textArea.style.height = '2em';
+                textArea.style.padding = 0;
+                textArea.style.border = 'none';
+                textArea.style.outline = 'none';
+                textArea.style.boxShadow = 'none';
+                textArea.style.background = 'transparent';
+
+                // get text
+                textArea.value = element.innerText;
+
+                // select and copy
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+
+                // remove text area
+                document.body.removeChild(textArea);
+            }
+        </script>
+
     </head>
 
     <body>
@@ -116,12 +147,14 @@
 
             <b>Symbols</b>
 
+            <p>Click to copy</p>
+
             <ul>
-                <li>Dashes: en (&ndash;), em (&mdash;)</li>
-                <li>Degrees: &deg;, C (&#8451;), F (&#8457;)</li>
-                <li>Currency: yen (&yen;), pound (&pound;)</li>
-                <li>Arrows: &larr;, &rarr;, &uarr;, &darr;</li>
-                <li>Miscellanous: &trade;, &copy;, &reg;</li>
+                <li>Dashes: en (<a href="#" onclick="copyelement(this)">&ndash;</a>), em (<a href="#" onclick="copyelement(this)">&mdash;</a>)</li>
+                <li>Degrees: <a href="#" onclick="copyelement(this)">&deg;</a>, C (<a href="#" onclick="copyelement(this)">&#8451;</a>), F (<a href="#" onclick="copyelement(this)">&#8457;</a>)</li>
+                <li>Currency: yen (<a href="#" onclick="copyelement(this)">&yen;</a>), pound (<a href="#" onclick="copyelement(this)">&pound;</a>)</li>
+                <li>Arrows: <a href="#" onclick="copyelement(this)">&larr;</a>, <a href="#" onclick="copyelement(this)">&rarr;</a>, <a href="#" onclick="copyelement(this)">&uarr;</a>, <a href="#" onclick="copyelement(this)">&darr;</a></li>
+                <li>Miscellanous: <a href="#" onclick="copyelement(this)">&trade;</a>, <a href="#" onclick="copyelement(this)">&copy;</a>, <a href="#" onclick="copyelement(this)">&reg;</a></li>
             </ul>
 
         </div>
