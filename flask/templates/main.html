@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="title">chuahou.dev</h3>
+
+<div style="text-align: center">
+	{% for i in range(links|length - 1) %}
+		<a href="{{ links[i][1] }}">{{ links[i][0] }}</a> ·
+	{% endfor %}
+	<a href="{{ links[links|length - 1][1] }}">
+		{{ links[links|length - 1][0] }}
+	</a>
+</div>
+{% endblock %}
