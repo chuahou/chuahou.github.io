@@ -5,10 +5,10 @@ ECHO := echo
 RM   := rm
 
 # programs
+VENV       := venv
 PIP        := $(VENV)/bin/pip3
 PYTHON     := $(VENV)/bin/python3
 SYS_PYTHON := python3
-VENV       := venv
 
 # paths
 BUILD_DIR       := build
