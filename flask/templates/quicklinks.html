@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/quicklinks.css') }}"/>
+{% endblock %}
+
+{% block content %}
+<h2 class="title">quick links</h3>
+
+<div class="scrolling-wrapper">
+	{% for category, links in categories.items() %}
+
+		<div class="card">
+			<h3>{{ category }}</h3>
+			{% for text, href in links.items() %}
+				<a href="{{ href }}">{{ text }}</a> <br/>
+			{% endfor %}
+		</div>
+		
+	{% endfor %}
+</div>
+{% endblock %}
