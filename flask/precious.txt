@@ -1,4 +1,5 @@
 .git
 CNAME
+LICENSE
 README.md
 flask
