@@ -1,10 +1,11 @@
 /* based on https://perfectmotherfuckingwebsite.com/ at 17 May 2020 */
 
 body {
+	width: 80%;
 	max-width: 650px;
 	margin: 40px auto;
 	padding: 0 10px;
-	font: 21px/3 Hack, monospace;
+	font: 21px/1.5 Hack, monospace;
 	color: #ddd;
 	background: #222
 }
@@ -18,13 +19,13 @@ body {
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	max-width: 100%;
+	max-width: 80%;
 	width: 650px;
 }
 
 h1, h2, h3 {
 	text-align: center;
-	line-height: 1.2;
+	line-height: 2;
 }
 
 .title {
