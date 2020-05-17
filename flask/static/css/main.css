@@ -63,3 +63,13 @@ a:hover {
 .left {
 	left: 10px;
 }
+.corner > a:link {
+	color: #bbe;
+	text-decoration: none;
+}
+.corner > a:visited {
+	color: #bbe;
+}
+.corner > a:hover {
+	color: #9cf;
+}
