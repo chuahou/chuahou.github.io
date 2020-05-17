@@ -1,0 +1,4 @@
+.git
+CNAME
+README.md
+flask
