@@ -51,6 +51,9 @@ a:hover {
 	color: #999;
 	font-size: 12px;
 }
+.top {
+	top: 10px;
+}
 .bottom {
 	bottom: 10px;
 }
