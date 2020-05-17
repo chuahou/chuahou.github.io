@@ -33,6 +33,24 @@ h1, h2, h3 {
 	text-indent: 0.1em; /* because it puts spacing after last letter */
 }
 
+.corner {
+	position: absolute;
+	color: #999;
+	font-size: 12px;
+}
+
+.bottom {
+	bottom: 10px;
+}
+
+.right {
+	right: 10px;
+}
+
+.left {
+	left: 10px;
+}
+
 a:link {
 	color: #5bf;
 	text-decoration: none;
