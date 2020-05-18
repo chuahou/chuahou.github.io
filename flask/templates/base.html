@@ -41,14 +41,11 @@
 		</div>
 		{% endif %}
 
-		<div class="corner top left">
-			<a href="/">to site top</a>
-		</div>
-		<div class="corner bottom right">
-			made with flask. <a href="https://github.com/chuahou/chuahou.github.io">code</a>
-		</div>
-		<div class="corner bottom left">
-			copyright (c) 2020 chua hou
-		</div>
+		{% block body %}{% endblock %}
+		{% include "corners/copyright_bottomleft.html" %}
+		{% include "corners/madewith_bottomright.html" %}
+		{% if link_to_top %}
+			{% include "corners/sitetop_topleft.html" %}
+		{% endif %}
 	</body>
 </html>

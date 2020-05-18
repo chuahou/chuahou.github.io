@@ -22,7 +22,7 @@ def quicklinks():
     with open("data/quicklinks.yml") as yaml_file:
         categories = yaml.load(yaml_file, Loader=yaml.FullLoader)
     return render_template("quicklinks.html", center_content=True,
-            categories=categories)
+            categories=categories, link_to_top=True)
 
 @app.route("/sitemap.xml")
 def sitemap():
