@@ -24,3 +24,13 @@ def quicklinks(qlinks_path):
             center_content=True,
             categories=categories,
             link_to_top=True)
+
+# Generic text page
+def text(title, text_file, center_content=True):
+    text = open(text_file).read()
+    return lambda: render_template(
+            "text.html",
+            center_content=center_content,
+            title=title,
+            text=text,
+            link_to_top=True)

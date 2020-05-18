@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<style>
+		{% include "cssmin/text.css" %}
+	</style>
+{% endblock %}
+
+{% block content %}
+<h2 class="title">{{ title|safe }}</h2>
+
+<div class="text-container">
+	<div>
+		{{ text|safe }}
+	</div>
+</div>
+{% endblock %}
