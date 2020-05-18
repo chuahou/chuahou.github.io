@@ -16,8 +16,8 @@ h1, h2, h3 {
 }
 
 .title {
-	letter-spacing: 0.1em;
-	text-indent: 0.1em; /* because it puts spacing after last letter */
+	letter-spacing: 0.03em;
+	text-indent: 0.03em; /* because it puts spacing after last letter */
 }
 
 /* hyperlinks */
