@@ -4,16 +4,12 @@ import yaml
 
 # Index page
 def index(links_path):
-    links = []
-    with open(links_path) as links_file:
-        lines = links_file.read().splitlines()
-        for line in lines:
-            split = line.split()
-            links.append((split[0], split[1]))
+    with open(links_path) as yaml_file:
+        links = yaml.load(yaml_file, Loader=yaml.FullLoader)
     return lambda: render_template(
             "main.html",
             center_content=True,
-            links=links)
+            links=list(links.items()))
 
 # Quicklinks page
 def quicklinks(qlinks_path):

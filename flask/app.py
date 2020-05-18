@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # list of pages and their rendering functions
 page_list = [
-        ("/", "index", pages.index("data/main_links.txt")),
+        ("/", "index", pages.index("data/main_links.yml")),
         ("/quicklinks/", "quicklinks", pages.quicklinks("data/quicklinks.yml"))
         ]
 
