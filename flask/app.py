@@ -4,32 +4,30 @@ from flask import Flask, render_template
 from flask_frozen import Freezer
 import yaml
 
+import pages
+
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    dict_links = []
-    with open("data/main_links.txt") as links_file:
-        links = links_file.read().splitlines()
-        for link in links:
-            split = link.split()
-            dict_links.append((split[0], split[1]))
-    return render_template("main.html", center_content=True, links=dict_links)
+# list of pages and their rendering functions
+page_list = [
+        ("/", pages.index("data/main_links.txt")),
+        ("/quicklinks/", pages.quicklinks("data/quicklinks.yml"))
+        ]
 
-@app.route("/quicklinks/index.html")
-def quicklinks():
-    categories = []
-    with open("data/quicklinks.yml") as yaml_file:
-        categories = yaml.load(yaml_file, Loader=yaml.FullLoader)
-    return render_template("quicklinks.html", center_content=True,
-            categories=categories, link_to_top=True)
+# add each page to app
+for rule, (endpoint, view_func) in page_list:
+    if rule[-1] == '/': # add "index.html" if necessary for freezing purposes
+        rule += "index.html"
+    app.add_url_rule(rule, endpoint, view_func)
 
+# generate sitemap from page_list
 @app.route("/sitemap.xml")
 def sitemap():
-    locations = []
+    locations = [rule for rule, _ in page_list]
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     return render_template("sitemap.xml", date=date, locations=locations)
 
+# freeze app to build/
 if __name__ == "__main__":
     freezer = Freezer(app)
     freezer.freeze()
