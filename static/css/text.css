@@ -1,0 +1,8 @@
+.text-container {
+	font-size: 0.8em;
+	overflow-y: auto;
+	max-height: 65vh;
+	background: #282828;
+	padding: 2em;
+	display: block;
+}

@@ -1,5 +1,9 @@
 /* based on https://perfectmotherfuckingwebsite.com/ at 17 May 2020 */
 
+html, body {
+	overflow: hidden;
+}
+
 body {
 	width: 80%;
 	max-width: 650px;
