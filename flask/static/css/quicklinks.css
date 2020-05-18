@@ -23,8 +23,8 @@
 	/* cosmetic */
 	text-align: center;
 	width: 200px;
-	height: 260px;
-	bottom: 10px;
+	height: 12em;
+	bottom: 0.6em;
 	position: relative;
 	overflow-y: scroll;
 	scrollbar-width: none;
