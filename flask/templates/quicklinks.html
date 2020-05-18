@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block head %}
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/quicklinks.css') }}"/>
+	<style>
+		{% include "cssmin/quicklinks.css" %}
+	</style>
 {% endblock %}
 
 {% block content %}
