@@ -10,7 +10,7 @@ def index(links_path):
         for line in lines:
             split = line.split()
             links.append((split[0], split[1]))
-    return "index", lambda: render_template(
+    return lambda: render_template(
             "main.html",
             center_content=True,
             links=links)
@@ -19,7 +19,7 @@ def index(links_path):
 def quicklinks(qlinks_path):
     with open(qlinks_path) as yaml_file:
         categories = yaml.load(yaml_file, Loader=yaml.FullLoader)
-    return "quicklinks", lambda: render_template(
+    return lambda: render_template(
             "quicklinks.html",
             center_content=True,
             categories=categories,

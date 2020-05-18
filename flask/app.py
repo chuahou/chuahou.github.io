@@ -10,12 +10,12 @@ app = Flask(__name__)
 
 # list of pages and their rendering functions
 page_list = [
-        ("/", pages.index("data/main_links.txt")),
-        ("/quicklinks/", pages.quicklinks("data/quicklinks.yml"))
+        ("/", "index", pages.index("data/main_links.txt")),
+        ("/quicklinks/", "quicklinks", pages.quicklinks("data/quicklinks.yml"))
         ]
 
 # add each page to app
-for rule, (endpoint, view_func) in page_list:
+for rule, endpoint, view_func in page_list:
     if rule[-1] == '/': # add "index.html" if necessary for freezing purposes
         rule += "index.html"
     app.add_url_rule(rule, endpoint, view_func)
@@ -23,7 +23,7 @@ for rule, (endpoint, view_func) in page_list:
 # generate sitemap from page_list
 @app.route("/sitemap.xml")
 def sitemap():
-    locations = [rule for rule, _ in page_list]
+    locations = [rule for rule, _, _ in page_list]
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     return render_template("sitemap.xml", date=date, locations=locations)
 
