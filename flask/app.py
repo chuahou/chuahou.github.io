@@ -1,3 +1,5 @@
+import datetime
+
 from flask import Flask, render_template
 from flask_frozen import Freezer
 import yaml
@@ -21,6 +23,12 @@ def quicklinks():
         categories = yaml.load(yaml_file, Loader=yaml.FullLoader)
     return render_template("quicklinks.html", center_content=True,
             categories=categories)
+
+@app.route("/sitemap.xml")
+def sitemap():
+    locations = []
+    date = datetime.datetime.now().strftime("%Y-%m-%d")
+    return render_template("sitemap.xml", date=date, locations=locations)
 
 if __name__ == "__main__":
     freezer = Freezer(app)
