@@ -11,7 +11,9 @@ app = Flask(__name__)
 # list of pages and their rendering functions
 page_list = [
         ("/", "index", pages.index("data/main_links.yml")),
-        ("/quicklinks/", "quicklinks", pages.quicklinks("data/quicklinks.yml"))
+        ("/quicklinks/", "quicklinks", pages.quicklinks("data/quicklinks.yml")),
+        ("/fontinfo/", "fontinfo", pages.text("font information",
+            "data/fontinfo.html"))
         ]
 
 # add each page to app

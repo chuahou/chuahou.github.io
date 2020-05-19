@@ -9,19 +9,20 @@ body {
 	max-width: 650px;
 	margin: 40px auto;
 	padding: 0 10px;
-	font: 21px/1.5 Hack, monospace;
+	font: 21px/1.5 "Iosevka Web", Roboto, monospace;
 	color: #ddd;
 	background: #222
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		font-size: 90%;
+	}
 }
 
 h1, h2, h3 {
 	text-align: center;
 	line-height: 2;
-}
-
-.title {
-	letter-spacing: 0.03em;
-	text-indent: 0.03em; /* because it puts spacing after last letter */
 }
 
 /* hyperlinks */

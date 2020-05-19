@@ -7,7 +7,7 @@
 		<!-- Stylesheets and basics -->
 		<title>chuahou.dev</title>
 		<link rel="icon" href="/static/img/icon.png"/>
-		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
+		<link rel="stylesheet" href="/static/fonts/iosevka/iosevka.css">
 
 		<!-- Basic metadata -->
 		<meta charset="utf-8"/>
@@ -35,7 +35,7 @@
 
 		<!-- inline main stylesheet -->
 		<style>
-			html,body{overflow:hidden}body{width:80%;max-width:650px;margin:40px auto;padding:0 10px;font:21px/1.5 Hack,monospace;color:#ddd;background:#222}h1,h2,h3{text-align:center;line-height:2}.title{letter-spacing:.03em;text-indent:.03em}a:link{color:#5bf;text-decoration:none}a:visited{color:#5bf}a:hover{color:#9cf}.container{height:100%}.vertical-center{position:absolute;top:45%;-ms-transform:translateY(-50%);transform:translateY(-50%);max-width:80%;width:650px}.corner{position:absolute;color:#999;font-size:12px}.top{top:10px}.bottom{bottom:10px}.right{right:10px}.left{left:10px}.corner>a:link{color:#bbe;text-decoration:none}.corner>a:visited{color:#bbe}.corner>a:hover{color:#9cf}
+			html,body{overflow:hidden}body{width:80%;max-width:650px;margin:40px auto;padding:0 10px;font:21px/1.5 "Iosevka Web",Roboto,monospace;color:#ddd;background:#222}@media only screen and (max-width:768px){body{font-size:90%}}h1,h2,h3{text-align:center;line-height:2}a:link{color:#5bf;text-decoration:none}a:visited{color:#5bf}a:hover{color:#9cf}.container{height:100%}.vertical-center{position:absolute;top:45%;-ms-transform:translateY(-50%);transform:translateY(-50%);max-width:80%;width:650px}.corner{position:absolute;color:#999;font-size:12px}.top{top:10px}.bottom{bottom:10px}.right{right:10px}.left{left:10px}.corner>a:link{color:#bbe;text-decoration:none}.corner>a:visited{color:#bbe}.corner>a:hover{color:#9cf}
 		</style>
 	</head>
 
@@ -168,7 +168,8 @@
 		<div class="corner bottom left">
 	copyright (c) 2020 chua hou
 </div>
-		<div class="corner bottom right">
+		<div class="corner bottom right" style="text-align: right">
+	font <a href="/fontinfo">iosevka</a><br/>
 	made with flask. <a href="https://github.com/chuahou/chuahou.github.io">code</a>
 </div>
 		
