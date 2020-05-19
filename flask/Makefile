@@ -12,7 +12,7 @@ RM    ?= rm
 # directories
 VENV_DIR       := venv
 BUILD_DIR      := build
-CSS_DIR        := static/css
+CSS_DIR        := inline/css
 CSS_TARGET_DIR := templates/cssmin
 TARGET_DIR     := ..
 
