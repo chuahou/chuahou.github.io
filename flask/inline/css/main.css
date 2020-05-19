@@ -9,14 +9,14 @@ body {
 	max-width: 650px;
 	margin: 40px auto;
 	padding: 0 10px;
-	font: 21px/1.5 "Iosevka Web", Roboto, monospace;
+	font: 135%/1.5 "Iosevka Web", Roboto, monospace;
 	color: #ddd;
 	background: #222
 }
 
 @media only screen and (max-width: 768px) {
 	body {
-		font-size: 90%;
+		font-size: 110%;
 	}
 }
 
