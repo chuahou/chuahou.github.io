@@ -14,7 +14,7 @@ page_list = [
         ("/quicklinks/", "quicklinks", pages.quicklinks("data/quicklinks.yml")),
         ("/fontinfo/", "fontinfo", pages.text("font information",
             "data/fontinfo.html")),
-        ("/404/", "404", pages.text("404", "data/404.html"))
+        ("/404.html", "404", pages.text("404", "data/404.html"))
         ]
 
 # add each page to app
