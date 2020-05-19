@@ -26,12 +26,9 @@ h1, h2, h3 {
 }
 
 /* hyperlinks */
-a:link {
+a {
 	color: #5bf;
 	text-decoration: none;
-}
-a:visited {
-	color: #5bf;
 }
 a:hover {
 	color: #9cf;
