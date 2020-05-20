@@ -1,5 +1,7 @@
 # chuahou.github.io
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A [website](https://chuahou.dev) with no content.
 Made using Flask, and Frozen-Flask to statically generate HTML for GitHub pages.
 
