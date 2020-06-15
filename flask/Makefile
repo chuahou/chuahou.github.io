@@ -90,7 +90,7 @@ $(VENV_DIR):
 	@$(TPUT_YELLOW)
 	@$(ECHO) "Creating virtual environment in $@ ..."
 	@$(TPUT_DEFAULT)
-	$(SYS_PYTHON) -m venv $@
+	$(SYS_PYTHON) -m $@ $@
 
 requirements: $(VENV_DIR)
 	@$(TPUT_YELLOW)
