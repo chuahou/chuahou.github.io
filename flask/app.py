@@ -26,7 +26,7 @@ for rule, endpoint, view_func in page_list:
 # generate sitemap from page_list
 @app.route("/sitemap.xml")
 def sitemap():
-    locations = [rule for rule, _, _ in page_list]
+    locations = [rule for rule, endpoint, _ in page_list if endpoint != "404"]
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     return render_template("sitemap.xml", date=date, locations=locations)
 
