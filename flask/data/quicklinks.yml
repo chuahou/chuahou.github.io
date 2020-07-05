@@ -1,9 +1,9 @@
 general:
-    chuahou.dev: /
+    chuahou.dev: https://chuahou.dev
     calendar: https://calendar.google.com/calendar
     clockify: https://clockify.me/tracker
     messenger: https://www.facebook.com/messages
-    wiki: /knowledge
+    wiki: https://chuahou.dev/knowledge
 programming:
     github: https://github.com
     lgtm: https://lgtm.com/dashboard
