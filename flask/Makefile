@@ -8,6 +8,7 @@ CP    ?= cp
 ECHO  ?= echo
 MKDIR ?= mkdir
 RM    ?= rm
+SED   ?= sed
 
 # directories
 VENV_DIR       := venv
@@ -29,12 +30,18 @@ FLASK_APP       := app.py
 PIP_REQUIRE     := requirements.txt
 STATIC_PRECIOUS := precious.txt # file of paths in target NOT to delete
 
+# local quicklinks location
+LOCAL_QL_DIR   := ~/.quicklinks
+LOCAL_QL_BUILD := $(BUILD_DIR)/quicklinks/index.html
+LOCAL_QL_PATH  := $(LOCAL_QL_DIR)/index.html
+LOCAL_QL_REQ   := static
+
 # Matches all generated static content in the TARGET_DIR. All files already in
 # TARGET_DIR that are not generated should be in STATIC_PRECIOUS (e.g. this
 # directory's path, README, LICENCE etc) to not be included here
 STATIC_CONTENT := $(shell find $(TARGET_DIR) \( `cat $(STATIC_PRECIOUS) | xargs printf "$(TARGET_DIR)/%s\n" | awk 'NR > 1 { printf("-o ") } { printf("-path %s ", $$1) }'` \) -prune -o -type f -print)
 
-.PHONY: all clean run requirements minimize
+.PHONY: all build clean local run requirements minimize
 
 # for coloured text
 TPUT_YELLOW  := tput setaf 3
@@ -44,7 +51,9 @@ TPUT_DEFAULT := tput sgr0
 ### main targets ###
 ####################
 
-all: $(VENV_DIR) requirements minimize
+all: build local
+
+build: $(VENV_DIR) requirements minimize
 	@$(TPUT_YELLOW)
 	@$(ECHO) "Removing installed contents of $(TARGET_DIR)/ ..."
 	@$(TPUT_DEFAULT)
@@ -114,3 +123,22 @@ $(CSS_TARGET_DIR):
 
 $(CSS_TARGET_DIR)/%.css: $(CSS_DIR)/%.css $(CSS_TARGET_DIR)
 	@$(UGLIFYCSS) $< --output $@
+
+########################
+### local quicklinks ###
+########################
+
+local: build
+	@$(TPUT_YELLOW)
+	@$(ECHO) "Creating local quicklinks copy ..."
+	@$(TPUT_DEFAULT)
+
+	@$(ECHO) "Creating directory $(LOCAL_QL_DIR) ..."
+	@$(MKDIR) -p $(LOCAL_QL_DIR)
+
+	@$(ECHO) "Copying quicklinks file and static directory ..."
+	@$(CP) $(LOCAL_QL_BUILD) $(LOCAL_QL_PATH)
+	@$(CP) -r $(LOCAL_QL_REQ) $(LOCAL_QL_DIR)
+
+	@$(ECHO) "Modifying absolute paths in $(LOCAL_QL_PATH) / -> ./ ..."
+	@$(SED) -i "s@=\"/@=\"./@" $(LOCAL_QL_PATH)
