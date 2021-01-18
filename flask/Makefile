@@ -20,7 +20,7 @@ TARGET_DIR     := ..
 PIP        ?= $(VENV_DIR)/bin/pip3
 PYTHON     ?= $(VENV_DIR)/bin/python3
 SYS_PYTHON ?= python3
-UGLIFYCSS  ?= uglifycss
+MINIFY     ?= minify
 
 # paths
 CSS_SOURCE      := $(wildcard $(CSS_DIR)/*.css)
@@ -113,4 +113,4 @@ $(CSS_TARGET_DIR):
 	@$(MKDIR) -p $@
 
 $(CSS_TARGET_DIR)/%.css: $(CSS_DIR)/%.css $(CSS_TARGET_DIR)
-	@$(UGLIFYCSS) $< --output $@
+	@$(MINIFY) $< -o $@
