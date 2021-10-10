@@ -3,7 +3,6 @@ general:
     calendar: https://calendar.google.com/calendar
     clockify: https://clockify.me/tracker
     messenger: https://www.facebook.com/messages
-    wiki: https://chuahou.dev/knowledge
 programming:
     github: https://github.com
     lgtm: https://lgtm.com/dashboard
@@ -22,8 +21,6 @@ university:
     solo: https://solo.bodleian.ox.ac.uk
     dept: https://www.cs.ox.ac.uk
     intranet: http://intranet.jesus.ox.ac.uk
-    online svc: http://home.jesus.ox.ac.uk/online-services.aspx
-    maths: https://courses.maths.ox.ac.uk/overview/undergraduate
     oxam: https://weblearn.ox.ac.uk/portal/site/:oxam
     oxcort: http://www.oxcort.ox.ac.uk
 entertainment:
@@ -32,10 +29,7 @@ entertainment:
     netflix: https://www.netflix.com
     crunchyroll: https://www.crunchyroll.com
     mal: https://myanimelist.net
-    eft wiki: https://escapefromtarkov.gamepedia.com
-    ammo: https://docs.google.com/spreadsheets/d/1l_8zSZg-viVTZ2bavMEIIKhix6mFTXuVHWcNKZgBrjQ
 social:
     gmail: https://mail.google.com
-    jesus jcr: https://www.facebook.com/groups/354234995258587
     oumssa: https://www.facebook.com/groups/oumssa
     nush alumni: https://www.facebook.com/groups/198982950150870
