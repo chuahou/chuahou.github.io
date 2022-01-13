@@ -2,7 +2,7 @@
   description = "A website made with Flask";
 
   inputs = {
-    nixpkgs.url     = "nixpkgs/nixos-20.09";
+    nixpkgs.url     = "nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
