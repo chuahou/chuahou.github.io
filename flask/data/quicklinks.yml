@@ -23,6 +23,7 @@ university:
     intranet: http://intranet.jesus.ox.ac.uk
     oxam: https://weblearn.ox.ac.uk/portal/site/:oxam
     oxcort: http://www.oxcort.ox.ac.uk
+    tms: https://academic.admin.ox.ac.uk/tms
 entertainment:
     reddit: https://old.reddit.com
     youtube: https://www.youtube.com
